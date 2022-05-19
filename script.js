@@ -56,7 +56,9 @@ let pokemonRepository = (function () {
       .then(function (details) {
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
-        item.types = details.types;
+        let types = [];
+        details.types.forEach((item) => types.push(item.type.name));
+        item.types = types;
       })
       .catch(function (e) {
         console.error(e);
@@ -87,17 +89,17 @@ let pokemonRepository = (function () {
     contentElement.innerText = "Height: " + pokemon.height;
 
     let typeElement = document.createElement("p");
-    typeElement.innerText = "Types: ";
+    typeElement.innerText = "Types: " + pokemon.types;
 
-    // foreach loop that adds space if more than one type
-    pokemon.types.forEach((type, numberOfTypes) => {
-      numberOfTypes = pokemon.types.pokemon;
-      if (numberOfTypes === 1) {
-        typeElement.innerText += type.type.name;
-      } else {
-        typeElement.innerText += type.type.name + " ";
-      }
-    });
+    //foreach loop that adds space if more than one type
+    // pokemon.types.forEach((type, numberOfTypes) => {
+    //   numberOfTypes = pokemon.types.pokemon;
+    //   if (numberOfTypes === 1) {
+    //     typeElement.innerText += type.type.name;
+    //   } else {
+    //     typeElement.innerText += type.type.name + ", ";
+    //   }
+    // });
 
     // creating an img tag that pulls front image of pokemon from api
     let imageElement = document.createElement("img");
