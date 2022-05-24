@@ -52,7 +52,7 @@ let pokemonRepository = (function () {
   }
 
   function filterList() {
-    let inputValue = $("input").val();
+    let inputValue = $("input").val().toUpperCase();
     let list = $("li");
     list.each(function () {
       let item = $(this);
