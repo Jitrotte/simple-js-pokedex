@@ -12,7 +12,7 @@ h1 {
   text-decoration: underline;
 }
 
-#modal-container {
+/* #modal-container {
   display: none;
 }
 
@@ -28,9 +28,9 @@ h1 {
   text-align: center;
   top: 0%;
   left: 0%;
-}
+} */
 
-.show-modal {
+/* .show-modal {
   margin: auto;
   display: inline-block;
   box-sizing: border-box;
@@ -39,11 +39,11 @@ h1 {
   width: 100%;
   max-width: 700px;
   text-align: left;
-}
+} */
 
-.modal-close {
+/* .modal-close {
   align-self: flex-end;
-}
+} */
 
 .modal-image {
   width: 100px;
