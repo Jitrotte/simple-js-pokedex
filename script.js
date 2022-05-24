@@ -2,6 +2,8 @@ let pokemonRepository = (function () {
   let pokemonList = [];
 
   let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=35";
+  let input = $("input");
+  input.on("input", filterList);
 
   function add(pokemon) {
     pokemonList.push(pokemon);
@@ -47,6 +49,20 @@ let pokemonRepository = (function () {
       .catch(function (e) {
         console.error(e);
       });
+  }
+
+  function filterList() {
+    let inputValue = $("input").val();
+    let list = $("li");
+    list.each(function () {
+      let item = $(this);
+      let name = item.text();
+      if (name.startsWith(inputValue)) {
+        item.show();
+      } else {
+        item.hide();
+      }
+    });
   }
 
   function loadDetails(item) {
@@ -109,6 +125,7 @@ let pokemonRepository = (function () {
     addEvent: addEvent,
     loadList: loadList,
     loadDetails: loadDetails,
+    filterList: filterList,
   };
 })();
 
