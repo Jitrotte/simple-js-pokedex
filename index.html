@@ -13,11 +13,35 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <title>Simple JS app</title>
   </head>
-  <body class="container">
-    <header>
-      <div></div>
-    </header>
 
+  <body>
+    <nav class="navbar fixed-top navbar-dark">
+      <img
+        class="img-fluid"
+        width="250"
+        height="150"
+        src="imgs/pokemon-logo-png-2.png"
+        alt="Pokemon logo"
+      />
+      <form class="form-inline">
+        <input
+          class="form-control rounded"
+          id="input"
+          type="search"
+          placeholder="Search Pokemon"
+          aria-label="Search Pokemon"
+        />
+      </form>
+    </nav>
+    <main>
+      <div class="page-container">
+        <ul
+          class="list-group pokemon-list list-unstyled flex-row flex-wrap justify-content-center col-lg-12"
+          data-toggle="modal"
+          data-target="#pokemonModal"
+        ></ul>
+      </div>
+    </main>
     <div
       class="modal fade"
       id="pokemonModal"
@@ -48,31 +72,7 @@
         </div>
       </div>
     </div>
-    <nav class="navbar navbar-dark">
-      <img
-        class="img-fluid"
-        width="250"
-        height="150"
-        src="imgs/pokemon-logo-png-2.png"
-        alt="Pokemon logo"
-      />
-      <form class="form-inline">
-        <input
-          class="form-control rounded"
-          id="input"
-          type="search"
-          placeholder="Search Pokemon"
-          aria-label="Search Pokemon"
-        />
-      </form>
-    </nav>
 
-    <!-- <div id="modal-container"></div> -->
-    <ul
-      class="pokemon-list list-unstyled text-center"
-      data-toggle="modal"
-      data-target="#pokemonModal"
-    ></ul>
     <script src="promise-polyfill.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

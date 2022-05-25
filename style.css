@@ -5,11 +5,30 @@
   font-size: 32px;
   margin-top: 10px;
   border-radius: 8px;
+  width: 350px;
+  height: 200px;
+}
+
+.page-container {
+  margin-top: 100px;
+}
+
+nav {
+  background-color: blue;
+}
+
+body {
+  padding-top: 100px;
+  background-color: #de354c;
 }
 
 h1 {
   color: blue;
   text-decoration: underline;
+}
+
+.pokemon-list {
+  gap: 10px;
 }
 
 .modal-img {
