@@ -1,0 +1,31 @@
+.button-class {
+  background-color: #f0f8ff;
+  padding: 50px 75px;
+  cursor: pointer;
+  font-size: 32px;
+  margin-top: 10px;
+  border-radius: 8px;
+  width: 350px;
+  height: 200px;
+}
+.page-container {
+  margin-top: 100px;
+}
+nav {
+  background-color: #00f;
+}
+body {
+  padding-top: 100px;
+  background-color: #de354c;
+}
+h1 {
+  color: #00f;
+  text-decoration: underline;
+}
+.pokemon-list {
+  gap: 10px;
+}
+.modal-img {
+  width: 200px;
+  height: auto;
+}
